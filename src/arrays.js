@@ -1,5 +1,6 @@
 const getNthElement = (index, array) => {
   // your code here
+  return getNthElement.slice ();
 };
 
 const arrayToCSVString = array => {
