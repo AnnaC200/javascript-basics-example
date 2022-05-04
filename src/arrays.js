@@ -1,62 +1,76 @@
 const getNthElement = (index, array) => {
-  // your code here
-  return getNthElement.slice ();
+  return array[index % array.length];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return [...array,element];
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice (index,1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(numbers=> numbers.toString())
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(strings => strings.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(string => string.split('').reverse().join(''));
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(even => even % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter((_, itemIndex) => itemIndex !== index);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(string => {
+    return (
+      string[0] === "a" ||
+      string[0] === "e" ||
+      string[0] === "i" ||
+      string[0] === "o" ||
+      string[0] === "u" ||
+      string[0] === "A" ||
+      string[0] === "E" ||
+      string[0] === "I" ||
+      string[0] === "O" ||
+      string[0] === "U"
+    );
+  });
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return numbers.reduce(reducer);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  const reverseString = (item) => item.split('').reverse().join('');
+  return strings.map(reverseString).sort().map(reverseString);
 };
 
 module.exports = {

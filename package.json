@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Exercises covering basic JavaScript concepts",
   "scripts": {
-    "test": "jest --verbose"
+    "jest": "jest --verbose"
   },
   "main": "src/index.js",
   "repository": {
